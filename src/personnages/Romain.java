@@ -21,13 +21,17 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 
-	public void frapper(Romain romain) {
-		System.out.println(nom + "envoie un grand coup dans la mâchoire de" + romain.getNom());
-		romain.recevoirCoup(force / 3);
-	}
-
-	private void recevoirCoup(int i) {
-		// TODO Auto-generated method stub
+	public void recevoirCoup(int coup) {
+		this.force-=coup;
+		if (this.force<1) {
+			this.force=0;
+			String annonce = prendreParole() + "J'abandonne !";
+			System.out.println(annonce);
+		}
+		else {
+			String annonce = prendreParole() + "Aïe !";
+			System.out.println(annonce);
+		}
 
 	}
 

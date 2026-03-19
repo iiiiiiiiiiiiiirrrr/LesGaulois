@@ -11,11 +11,13 @@ public class TestGaulois {
 		asterix.parler("Bonjour Obélix");
 		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
 		asterix.parler("Oui très bonne idée.");
-	}
-
-	public void frapper(Romain romain) {
-		System.out.println(romain.getNom() + "envoie un grand coup dans la mâchoire de" + romain.getNom());
-		// romain.recevoirCoup();
+		
+		Romain minus = new Romain("Minus", 6);
+		System.out.println("Dans la forêt " + asterix.getNom() + " et " + obelix.getNom() + " tombent nez à nez sur le romain " + minus.getNom());
+		
+		for (int i = 0; i < 3; i++) {
+			asterix.frapper(minus);
+		}
 	}
 
 }
