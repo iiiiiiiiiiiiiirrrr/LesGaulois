@@ -22,15 +22,12 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int coup) {
-		this.force-=coup;
-		if (this.force<1) {
-			this.force=0;
-			String annonce = prendreParole() + "J'abandonne !";
-			System.out.println(annonce);
-		}
-		else {
-			String annonce = prendreParole() + "Aïe !";
-			System.out.println(annonce);
+		this.force -= coup;
+		if (this.force < 1) {
+			this.force = 0;
+			parler("J'abandonne !");
+		} else {
+			parler("Aïe !");
 		}
 
 	}
